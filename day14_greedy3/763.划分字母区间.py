@@ -30,7 +30,7 @@ class Solution(object):
                 start = i + 1 # 更新下一个片段的起点
                 
         return result
-时间复杂度:O(N)
-空间复杂度:O(1)哈希表最多存储26个字母
+#时间复杂度:O(N)
+#空间复杂度:O(1)哈希表最多存储26个字母
 # @lc code=end
 
