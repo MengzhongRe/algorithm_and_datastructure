@@ -1,0 +1,4 @@
+#忽略vscode配置文件夹
+.vscode/
+#忽略Python编译生成的文件夹
+__pycache__/
