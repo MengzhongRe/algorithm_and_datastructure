@@ -68,6 +68,7 @@
 | **22** | Stock Adv | 188. Stock IV (k Transactions)<br>309. Stock with Cooldown<br>714. Stock with Transaction Fee | 🔴<br>🟡 | [Link](./day22_dp8_stock_final/README.md) | 冷冻期状态定义 / 通用解法 |
 | **23** | Subsequence | 300. Longest Increasing Subseq (LIS)<br>674. Longest Continuous Incr Subseq<br>1143. Longest Common Subseq (LCS) | 🟡 | [Link](./day23_dp9/README.md) | **子序列(不连续) vs 子数组(连续)** |
 | **24** | String_DP | 115.不同的子序列 (LIS)<br>583.两个字符串的删除操作<br>1035.不相交的线| 🟡<br>🔴🟡 | [Link](./day24_dp10_str/README.md) | **字符串dp** |
+| **25** | String_DP2 | 72. 编辑距离 (Edit Distance)<br>647. 回文子串 (Palindromic Substrings)| 🔴🟡 | [Link](./day25_dp11/README.md) | **编辑距离/回文字符** |
 
 
 *(持续更新中... Next: Edit Distance & Palindromes)*
