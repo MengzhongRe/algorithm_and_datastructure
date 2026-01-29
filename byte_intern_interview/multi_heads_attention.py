@@ -16,7 +16,7 @@ class MultiHeadAttention(nn.Module):
         self.W_k = nn.Linear(d_model,d_model)
         self.W_v = nn.Linear(d_model,d_model)
 
-        self.fc_out = nn.Linear(d_model,d_model)
+        self.W_o = nn.Linear(d_model,d_model)
 
     def forward(self,q,k,v,mask=None):
         batch_size = q.size(0) # 先获取批量大小
@@ -37,14 +37,14 @@ class MultiHeadAttention(nn.Module):
         if mask is not None:
             scores = scores.masked_fill(mask==0,-1e9)
         
-        attention = torch.softmax(scores,dim=-1)
+        attention_weights = torch.softmax(scores,dim=-1)
 
         # 加权求和
         # out：[B,H,L,d_k]
-        out = torch.matmul(attention,V)
+        out = torch.matmul(attention_weights,V)
 
         # 考点拼接前必须加contiguous函数，开辟新的内存空间存在数据以供view函数调整维度，否则会报错
         # [B,H,L,d_k] -> [B,L,H,d_k] -> [B,L,d_model]
         out = out.transpose(1,2).contiguous().view(batch_size,-1,self.d_model)
 
-        return self.fc_out(out)
+        return self.W_o(out)
