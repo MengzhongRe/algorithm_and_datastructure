@@ -2,3 +2,6 @@
 .vscode/
 #忽略Python编译生成的文件夹
 __pycache__/
+
+byte_intern_interview/
+byte_intern_preview/

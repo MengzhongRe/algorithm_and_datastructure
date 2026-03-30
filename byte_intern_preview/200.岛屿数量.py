@@ -4,7 +4,8 @@
 # [200] 岛屿数量
 #
 #图论深度优先搜索，时间复杂度为O(M*N),空间复杂度为O()
-# @lc code=start
+# @lc code=start‘
+
 class Solution(object):
     def numIslands(self, grid):
         """
@@ -31,7 +32,7 @@ class Solution(object):
             dfs(i,j-1) #左
             dfs(i,j+1) #右
         
-        #迭代每个网格格子，判断是否为陆地'1'，若正确则计数,同时对该格子(i,j)实行销毁
+        #迭代每个网格格子，判断是否为陆地'1'，若正确则计数,同时对该格子(i,j)所在的陆地实行销毁
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == '1':
@@ -67,7 +68,7 @@ class Solution(object):
                 for dx,dy in [(-1,0),(1,0),(0,1),(0-1)]:
                     nx = x + dx
                     ny = y + dy
-                    # 检查令居是否是合法的陆地
+                    # 检查邻居是否是合法的陆地
                     if 0 <= nx < m and 0 <= ny < n and grid[nx][ny] == '1':
                         grid[nx][ny] = '0'# 一旦是就先标记
                         queue.append((nx,ny)) #再入队

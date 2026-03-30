@@ -20,7 +20,6 @@
 ### 1.2 逻辑推演 (Mathematical Logic)
 Attention 的本质是将输入映射到三个空间（Query, Key, Value），通过计算 Q 和 K 的相似度来对 V 进行加权。
 多头（Multi-Head）则是将高维特征空间 $d_{model}$ 切分为 $h$ 个子空间，让模型并行捕捉不同层面的语义关联。
-
 **核心公式：**
 $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
 $$head_{dim} = dim // heads$$

@@ -14,15 +14,18 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        min_heap = []
+        min_heap = [] # 初始化一个空的最小堆，其中堆顶是堆中最小的元素
 
-        for num in nums:
-            if len(min_heap) < k:
-                heapq.heappush(min_heap,num)
-            else:
-                if num > min_heap[0]:
+        for num in nums: # 遍历原数组
+            if len(min_heap) < k: # 如果此时最小堆不到k个元素
+                heapq.heappush(min_heap,num) # 将该元素推入堆中，会自动调整堆结构（时间复杂度O(logk）)
+                # 使得堆顶的元素是其中最小的元素
+            else: # 如果堆中已经有k个元素了
+                if num > min_heap[0]: # 需要比较新元素与堆顶元素（也就是堆中的最小值），如果其比堆顶元素小
+                    # 则说明其比堆中所有元素都小，直接跳过。但如果其比堆顶元素大，则把堆顶元素pop出来，然后把
+                    # 新元素加入到堆中， 并自动调整堆结构
                     heapq.heapreplace(min_heap,num)
-
+        
         return min_heap[0]
 
 # @lc code=end

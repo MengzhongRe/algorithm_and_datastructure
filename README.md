@@ -60,8 +60,8 @@
 |:---:|:---|:---|:---:|:---:|:---|
 | **15** | DP Basics | 509. Fibonacci Number<br>70. Climbing Stairs<br>746. Min Cost Climbing Stairs | 🟢 | [Link](./day15/README.md) | DP 五部曲 / 滚动数组优化 |
 | **16** | 0-1 Knapsack | 0-1 Knapsack Theory<br>416. Partition Equal Subset Sum | 🟡 | [Link](./day16/README.md) | **倒序遍历** / 滚动数组 |
-| **17** | Knapsack Vars | 1049. Last Stone Weight II<br>494. Target Sum<br>474. Ones and Zeroes | 🟡 | [Link](./day17/README.md) | 求组合数公式 / 二维费用背包 |
-| **18** | Complete Pack | 322. Coin Change<br>279. Perfect Squares | 🟡 | [Link](./day18/README.md) | **正序遍历** / 凑满问题 |
+| **17** | Knapsack Vars | 1049. Last Stone Weight II<br>494. Target Sum<br>474. Ones and Zeroes | 🟡 | [Link](./day17_dp3/README.md) | 求组合数公式 / 二维费用背包 |
+| **18** | Complete Pack | 322. Coin Change<br>279. Perfect Squares | 🟡 | [Link](./day18_dp4/README.md) | **正序遍历** / 凑满问题 |
 | **19** | Pack Order | 518. Coin Change II<br>377. Combination Sum IV<br>139. Word Break | 🟡 | [Link](./day19_dp5_knapsack/README.md) | **组合(先物后包) vs 排列(先包后物)** |
 | **20** | House Robber | 198. House Robber<br>213. House Robber II<br>337. House Robber III | 🟡 | [Link](./day20_dp6_rob/README.md) | 环形DP / 树形DP (后序) |
 | **21** | Stock Series | 121. Stock I (One Transaction)<br>122. Stock II (Unlimited)<br>123. Stock III (2 Transactions) | 🟢<br>🔴 | [Link](./day21_dp_stock_problems/README.md) | 状态机 DP / 状态拆分 |
